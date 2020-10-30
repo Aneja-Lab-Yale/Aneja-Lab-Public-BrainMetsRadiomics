@@ -199,19 +199,19 @@ def RSF_bootstrap(fp, num=False):
 		score = rsf.score(X_test, y_test)
 		metrics.append(score)
 
-		# calculate confidence interval
-		alpha = 0.95
-		p = ((1.0 - alpha) / 2.0) * 100
-		lower = max(0.0, np.percentile(metrics, p))
-		p = (alpha + ((1.0 - alpha) / 2.0)) * 100
-		upper = min(1.0, np.percentile(metrics, p))
-		med = np.percentile(metrics, 50)
+	# calculate confidence interval
+	alpha = 0.95
+	p = ((1.0 - alpha) / 2.0) * 100
+	lower = max(0.0, np.percentile(metrics, p))
+	p = (alpha + ((1.0 - alpha) / 2.0)) * 100
+	upper = min(1.0, np.percentile(metrics, p))
+	med = np.percentile(metrics, 50)
 
-		# identify aggregation method name
-		if num:
-			name = fp.split('/')[-1].split('_')[0] + ' + NumMets'
-		else:
-			name = fp.split('/')[-1].split('_')[0]
+	# identify aggregation method name
+	if num:
+		name = fp.split('/')[-1].split('_')[0] + ' + NumMets'
+	else:
+		name = fp.split('/')[-1].split('_')[0]
 
 	return print(name, 'RSF', '%.3f (%.3f-%.3f)' % (med, lower, upper))
 
