@@ -89,9 +89,6 @@ surv5mm_radiomic['Z'] = surv5mm_radiomic['ID'].map(Zdic)
 # calculate volume
 # -------------------- #
 
-# surv5mm_radiomic['volume'] = surv5mm_radiomic['XY'] * surv5mm_radiomic['XY'] * surv5mm_radiomic['Z']
-
-# TODO FIX THIS
 pi = 3.1415926535897931
 r = surv5mm_radiomic['XY'] / 2  # XY is the diameter at the largest width of the tumor in the axial plane
 surv5mm_radiomic['volume'] = 4/3 * pi * r**3
