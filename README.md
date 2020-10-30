@@ -2,7 +2,7 @@
 
 # Workflow
 
-1. Run `preprocess.py` to isolate individual tumors from DICOM files with corresponding segmentations, correct for low 
+1. Run `preprocess.py` to isolate individual tumors from DICOM files with corresponding segmentations, resample to 1 mm pixel spacing, correct for low 
 frequency intensity non-uniformity present in MRI data with the N4ITK bias field correction algorithm, and z-score 
 normalize to reduce inter-scan bias. This saves individual images and masks as `.nrrd` files in addition to a dictionary 
 linking anonymous patient identifiers to tumor-level imaging metrics.
