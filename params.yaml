@@ -1,0 +1,7 @@
+# https://pyradiomics.readthedocs.io/en/latest/radiomics.html#module-radiomics.imageoperations
+
+# #############################  Extracted using PyRadiomics version: 2.2.0  ######################################
+
+imageType:
+  Original: {}
+  Wavelet: {}
