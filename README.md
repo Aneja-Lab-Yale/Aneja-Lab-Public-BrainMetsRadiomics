@@ -6,7 +6,7 @@
 frequency intensity non-uniformity present in MRI data with the N4ITK bias field correction algorithm, and z-score 
 normalize to reduce inter-scan bias. This saves individual images and masks as `.nrrd` files in addition to a dictionary 
 linking anonymous patient identifiers to tumor-level imaging metrics.
-2. Setup a `.csv` file for input to the pyradiomics extraction pipeline using `radiomic_setup.py`.
+2. Setup a `.csv` file identifying the input image and mask files to the pyradiomics extraction pipeline using `radiomic_setup.py`.
 3. Extract radiomic features using pyradiomics via the command line interface:
     ````
     pyradiomics imagemaskfile.csv -o radiomicsresults.csv -f csv --jobs 16 --param params.yaml
