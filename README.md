@@ -17,7 +17,7 @@ linking anonymous patient identifiers to tumor-level imaging metrics.
 7. Load and format radiomic features selected via mRMRe with `selected_radiomic_loading.py`.
 8. Train models using `survival_models.py`.
 
-# Example Images
+# Example Pre-Processing Images
 1. Input: Slices of brain MRI scans loaded from DICOM files
 2. Identification of region of interest: Tumor segmentation
 3. Output: Extracted tumor of interest
